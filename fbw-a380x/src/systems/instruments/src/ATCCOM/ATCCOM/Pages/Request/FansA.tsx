@@ -230,9 +230,24 @@ export const Menu: FC<MenuProps> = ({ x, y, elements, blacklist, exchangelist, d
         >
           TRACK
         </DropdownItem>
-        <DropdownItem>SID/STAR</DropdownItem>
-        <DropdownItem>TAILORED ARRIVAL</DropdownItem>
-        <DropdownItem>REROUTING</DropdownItem>
+        <DropdownItem
+          onSelect={() => onSelect('RequestSIDSTAR')}
+          disabled={MaxRequestElements <= elements.length || isInList(blacklist, 'RequestSIDSTAR')}
+          >
+          SID/STAR
+        </DropdownItem>
+        <DropdownItem
+          onSelect={() => onSelect('RequestTailoredArrival')}
+          disabled={MaxRequestElements <= elements.length || isInList(blacklist, 'RequestTailoredArrival')}
+          >
+          TAILORED ARRIVAL
+          </DropdownItem>
+        <DropdownItem
+          onSelect={() => onSelect('RequestRerouting')}
+          disabled={isInList(blacklist, 'RequestRerouting')}
+          >
+          REROUTING
+        </DropdownItem>
       </Dropdown>
       <Dropdown
         x={0}

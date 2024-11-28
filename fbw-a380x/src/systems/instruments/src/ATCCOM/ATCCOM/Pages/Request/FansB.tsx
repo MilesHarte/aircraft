@@ -15,6 +15,12 @@ render(): VNode {
     return (
         <div>
             <DropdownMenu ref={this.dropdownMenuRef}>VERTICAL</DropdownMenu>
+              <button>CLIMB TO</button>
+              <button>DESCEND TO</button>
+              <button>ATL/FL</button>
+              <button>BLOCK ATL/FL</button>
+              <button>CRUISE CLIMB</button>
+              <button>ITP</button>
             <DropdownMenu ref={this.dropdownMenuRef}>LATERAL</DropdownMenu>
             <DropdownMenu ref={this.dropdownMenuRef}>SPEED</DropdownMenu>
             <DropdownMenu ref={this.dropdownMenuRef}>CLEARANCE</DropdownMenu>
